@@ -10,7 +10,7 @@ const List<Color> _colorTheme=[
   Color(0xFF65A69F),
   Color(0xFF9BBFBC),
   Color(0xFF1BCABB),
-  Color(0xFF31B5DA),
+  Color(0xFFE71FDD),
 ];
 
 class AppTheme{

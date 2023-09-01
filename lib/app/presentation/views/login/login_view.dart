@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:unaslindas/app/presentation/views/Register/register_view.dart';
-import 'package:unaslindas/app/presentation/views/forgot_password/forgot_%20password_view.dart';
+import 'package:unaslindas/app/presentation/views/login/forgot_password/forgot_%20password_view.dart';
 import 'package:unaslindas/app/presentation/views/login/widgets/login_divider.dart';
+import 'package:unaslindas/app/presentation/views/menu/menu_view.dart';
 import 'package:unaslindas/app/presentation/widgets/links_common.dart';
 import '../../../config/themes/theme.dart';
 import '../../widgets/miboton.dart';
@@ -89,6 +90,10 @@ class LoginView extends StatelessWidget {
                   MyButtonForm(
                     text: 'Login',
                     onTab: (){
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => MenuView())
+                      );
                       print('Email address: ${_emailAddress.text}');
                       print('Email address: ${_visiblePassword.text}');
                     },
@@ -136,8 +141,9 @@ class LoginView extends StatelessWidget {
                             },
                             child: Text('Sign up',
                               style: TextStyle(
-                                  color: Theme.of(context).colorScheme.primary
-                              ),)
+                                  color: Theme.of(context).colorScheme.primary),),
+
+
                         )
                       ],
                     ),

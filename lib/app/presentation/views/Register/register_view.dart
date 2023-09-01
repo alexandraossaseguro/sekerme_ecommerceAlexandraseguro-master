@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:unaslindas/app/presentation/views/menu/menu_view.dart';
 import 'package:unaslindas/app/presentation/widgets/links_common.dart';
 import '../../../config/themes/theme.dart';
 import '../../widgets/miboton.dart';
@@ -105,7 +106,12 @@ class RegisterView extends StatelessWidget {
                   const SizedBox(height: 20,),
                   MyButtonForm(
                     text: 'Register',
-                    onTab: (){},
+                    onTab: (){
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => MenuView()),
+                      );
+                    },
                   )
                 ],
               ),

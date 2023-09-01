@@ -3,13 +3,21 @@
 //Se debe agregar la ruta en el Map de rutas
 
 import 'package:go_router/go_router.dart';
-import 'package:unaslindas/app/presentation/views/forgot_password/forgot_%20password_view.dart';
+import 'package:unaslindas/app/presentation/views/agendamiento/cita_view.dart';
+import 'package:unaslindas/app/presentation/views/contactos/contactos_view.dart';
+
+import 'package:unaslindas/app/presentation/views/login/forgot_password/forgot_%20password_view.dart';
+import 'package:unaslindas/app/presentation/views/menu/menu_view.dart';
+import 'package:unaslindas/app/presentation/views/servicio/servicio_view.dart';
 
 
 
 //Archivo que contiene los links de las vistas
 import 'package:unaslindas/app/presentation/views/views_links.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+
+
+
 
 
 final appRouter = GoRouter(
@@ -47,8 +55,35 @@ final appRouter = GoRouter(
       name: ForgotPasswordView.name,
       builder: (context, state) => ForgotPasswordView(),
     ),
+    GoRoute(
+      path: '/citas_view',
+      name: CitasView.name,
+      builder: (context, state) => CitasView(),
+    ),
+    GoRoute(
+      path: '/menu_view',
+      name: MenuView.name,
+      builder: (context, state) => MenuView(),
+    ),
+    GoRoute(
+      path: '/servicio_view',
+      name: ServicioView.name,
+      builder: (context, state) => ServicioView(),
+    ),
+    GoRoute(
+      path: '/contacto_view',
+      name: ContactoView.name,
+      builder: (context, state) => ContactoView(),
+    )
+
+
   ],
 
 );
+
+
+
+
+
 
 

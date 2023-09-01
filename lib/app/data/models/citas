@@ -1,0 +1,28 @@
+Usuario
+
+import 'package:equatable/equatable.dart';
+
+class UserModel extends Equatable {
+  final int idUsuario
+  final String nombre;
+  final String apellido;
+  final String contacto;
+  final String direccion;
+  final String email;
+  final String nombreUsuario;
+  final String contraseña;
+
+  const UserModel({
+    required this.idUsuario,
+    required this.nombre,
+    required this.apellido,
+    required this.contacto,
+    required this.direccion,
+    required this.email,
+    required this.nombreUsuario,
+    required this.contraseña,
+  });
+
+  @override
+  List<Object?> get props => [nombre, apellido, contacto, direccion, email, nombreUsuario, contraseña];
+}
